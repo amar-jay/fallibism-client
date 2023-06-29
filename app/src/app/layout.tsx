@@ -6,6 +6,7 @@ import { ThemeProvider } from '@/components/theme-provider'
 import { Analytics } from '@/components/analytics'
 import { Toaster } from '@/components/ui/toaster'
 import { TailwindIndicator } from '@/components/tailwind-indicator'
+import { siteConfig } from '../site-config'
 
 
 // primary font style
@@ -21,21 +22,6 @@ const inter = Inter({
 //   variable: "---xxx",
 // })
 
-type SiteConfig = {
-  name: string
-  description: string
-  url: string
-}
-
-var siteConfig  = {} as SiteConfig
-
-if (process.env.NODE_ENV === 'production') {
-  siteConfig = {
-    name: 'fallibilism',
-    description: 'xxxxx',
-    url: 'https://themanan.com',
-  }
-}
 export const metadata = {
   title: {
     default: siteConfig.name,

@@ -4,7 +4,8 @@ import {
   Check,
   ChevronLeft,
   ChevronRight,
-  Command,
+  // Command,
+  LucideSignalZero,
   CreditCard,
   File,
   FileText,
@@ -29,7 +30,7 @@ import {
 export type Icon = LucideIcon
 
 export const Icons = {
-  logo: Command,
+  logo: LucideSignalZero,
   close: X,
   spinner: Loader2,
   chevronLeft: ChevronLeft,

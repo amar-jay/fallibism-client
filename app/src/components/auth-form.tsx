@@ -12,7 +12,7 @@ import { userAuthSchema } from "@/lib/validations/auth"
 import { buttonVariants } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { toast } from "@/components/ui/use-toast"
+import { toast } from "@/components/hooks/use-toast"
 import { Icons } from "@/components/icons"
 
 interface UserAuthFormProps extends React.HTMLAttributes<HTMLDivElement> {}
@@ -100,7 +100,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
       </div>
       <button
         type="button"
-        className={cn(buttonVariants({ variant: "outline" }))}
+        className={cn(buttonVariants({ variant: "secondary",className:"rounded-md" }))}
         onClick={() => {
           setIsGitHubLoading(true)
           signIn("github")
