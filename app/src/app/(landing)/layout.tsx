@@ -19,6 +19,7 @@ const inter = Inter({
 //   variable: "---xxx",
 // })
 
+
 export const metadata = {
   title: {
     default: siteConfig.name,
@@ -70,11 +71,14 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+
   return (
     <>
           <Nav />
-          {children}
           <SiteFooter />
+    <div className='flex flex-col h-screen w-screen'>
+          {children}
+    </div>
     </>
   )
 }

@@ -45,12 +45,12 @@ export default function LoginPage() {
 	})
 	}
   return (
-    <div className="container flex h-screen w-screen flex-col items-center justify-center">
+    <div className=" relative container flex-1 flex max-h-min w-screen flex-col items-center justify-center">
       <Link
         href="/"
         className={cn(
           buttonVariants({ variant: "ghost" }),
-          "absolute left-4 top-4 md:left-8 md:top-8"
+          "absolute left-4 top-1 md:left-8 md:top-8"
         )}
       >
         <>
@@ -90,7 +90,7 @@ export default function LoginPage() {
               </p>
             )}
 
-			<button className={cn(buttonVariants())} disabled={isLoading}>
+			<button className={cn(buttonVariants({className: "my-3"}))} disabled={isLoading}>
 				{isLoading && (
 					<Icons.spinner className="mr-2 h-4 w-4 animate-spin rounded-md" />
 				)}
@@ -111,7 +111,7 @@ export default function LoginPage() {
 
 		      <button
         type="button"
-        className={cn(buttonVariants({ variant: "secondary",className:"rounded-md w-full" }))}
+        className={cn(buttonVariants({ variant: "secondary",className:"rounded-md w-full my-3" }))}
         onClick={() => {
           share({
 			title: "Newsletter",

@@ -34,15 +34,15 @@ export function ChatBubble({ message, isMine }: ChatBubbleProps) {
 	return (
               <div className={
 				cn("flex items-center py-5",
-				isMine ? "justify-end flex-row-reverse" : "justify-start"
+				isMine ? "justify-end flex-row-reverse ml-auto" : "justify-start mr-auto"
 				)}>
                 <div className={cn(
 					"h-4 w-4 border-y-8 border-l-0 border-r-8 border-solid border-muted border-y-transparent",
-					isMine ? "color-primary border-primary" : ""
+					isMine ? "border-primary rotate-180" : ""
 					)}></div>
                 <div className={cn(
 					"flex h-10 items-center rounded-md border border-muted bg-muted px-4 font-medium",
-					isMine ? "bg-primary border-primary" : ""
+					isMine ? "bg-primary border-primary text-background " : ""
 
 				)}>
                   {message}

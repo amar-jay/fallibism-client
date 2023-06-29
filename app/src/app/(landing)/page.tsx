@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
 import { Command, X, ServerIcon, Server } from "lucide-react"
 import { Card } from "./Card"
+import { redirect } from "next/navigation"
 
 async function getGitHubStars(): Promise<string | null> {
   // try {
@@ -37,6 +38,7 @@ async function getGitHubStars(): Promise<string | null> {
 
 export default async function IndexPage() {
   const stars = await getGitHubStars()
+
 
   return (
     <>
