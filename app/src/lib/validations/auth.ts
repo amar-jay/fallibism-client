@@ -4,3 +4,9 @@ import * as z from "zod"
 export const userAuthSchema = z.object({
   email: z.string().email(),
 })
+
+
+// email schema
+export const emailSchema = z.object({
+  email: z.string().email(),
+})

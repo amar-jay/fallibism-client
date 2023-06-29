@@ -1,3 +1,4 @@
+import { Share } from "lucide-react"
 import {
   AlertTriangle,
   ArrowRight,
@@ -42,6 +43,7 @@ export const Icons = {
   settings: Settings,
   billing: CreditCard,
   ellipsis: MoreVertical,
+  share: Share,
   add: Plus,
   warning: AlertTriangle,
   user: User,

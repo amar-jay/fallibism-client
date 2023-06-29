@@ -1,11 +1,6 @@
-import { cn } from '@/lib/utils'
 import '../globals.css'
 import { Inter } from 'next/font/google'
 // import localFont from "next/font/local"
-import { ThemeProvider } from '@/components/theme-provider'
-import { Analytics } from '@/components/analytics'
-import { Toaster } from '@/components/ui/toaster'
-import { TailwindIndicator } from '@/components/tailwind-indicator'
 import { siteConfig } from '../../site-config'
 import { Nav } from './Nav'
 import { SiteFooter } from '@/components/ui/footer'
@@ -61,7 +56,7 @@ export const metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
     images: [`${siteConfig.url}/og.jpg`],
-    creator: "@shadcn",
+    creator: siteConfig.handle,
   },
   icons: {
     icon: "/favicon.ico",
