@@ -15,7 +15,7 @@ export type SiteConfig = {
 var siteConfig  = {} as SiteConfig
 
 const repoName = 'fallibilism/struct'
-if (process.env.NODE_ENV === 'production') {
+if (process.env.NODE_ENV !== 'production') {
   siteConfig = {
     name: 'fallibilism',
     description: 'xxxxx',
@@ -25,7 +25,7 @@ if (process.env.NODE_ENV === 'production') {
       api: 'https://api.github.com/repos/' + repoName,
     },
     links: {
-      twitter: 'https://twitter.com/themanan',
+      twitter: 'https://twitter.com/AbdelmananAbde2',
     }
   }
 }
