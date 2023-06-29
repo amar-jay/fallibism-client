@@ -108,9 +108,10 @@ export default function LoginPage() {
 			</div>
 			</div>
 		</div>
+
 		      <button
         type="button"
-        className={cn(buttonVariants({ variant: "secondary",className:"rounded-md" }))}
+        className={cn(buttonVariants({ variant: "secondary",className:"rounded-md w-full" }))}
         onClick={() => {
           share({
 			title: "Newsletter",
