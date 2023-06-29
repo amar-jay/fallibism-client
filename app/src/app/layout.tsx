@@ -1,14 +1,12 @@
 import { cn } from '@/lib/utils'
-import '../globals.css'
+import './globals.css'
 import { Inter } from 'next/font/google'
 // import localFont from "next/font/local"
 import { ThemeProvider } from '@/components/theme-provider'
 import { Analytics } from '@/components/analytics'
 import { Toaster } from '@/components/ui/toaster'
 import { TailwindIndicator } from '@/components/tailwind-indicator'
-import { siteConfig } from '../../site-config'
-import { Nav } from './Nav'
-import { SiteFooter } from '@/components/ui/footer'
+import { siteConfig } from '../site-config'
 
 
 // primary font style
@@ -76,10 +74,22 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <>
-          <Nav />
+      <html lang="en" suppressHydrationWarning>
+      <head />
+      <body
+        className={cn(
+          "min-h-screen bg-background font-sans antialiased",
+          inter.variable,
+          // secondaryFont.variable
+        )}
+      >
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}
-          <SiteFooter />
-    </>
+          <Analytics />
+          <Toaster />
+          {process.env.NODE_ENV != "production" && <TailwindIndicator />}
+        </ThemeProvider>
+      </body>
+    </html>
   )
 }

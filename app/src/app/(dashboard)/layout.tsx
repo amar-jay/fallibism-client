@@ -1,4 +1,4 @@
-function DashboardLayout({ children }: { children: React.ReactNode }) {
+export default function DashboardLayout({ children }: { children: React.ReactNode }) {
   return (
 	<>
 	  {/* <h1>Dashboard</h1> */}
