@@ -1,5 +1,5 @@
 import { Icons, Icon } from "@/components";
-import SidebarDemo from "./layout/sidebar";
+import SidebarDemo from "./sidebar";
 import { TooltipProvider } from "@radix-ui/react-tooltip";
 // import { DocsSearch } from "@/components/search"
 
@@ -46,6 +46,7 @@ const sidebarItems: DashSidebarItemType[] = [
 ];
 interface DocsLayoutProps {
   children: React.ReactNode;
+  sidebarItems?: DashSidebarItemType[];
 }
 
 export function DashboardLayout({ children }: DocsLayoutProps) {
@@ -54,11 +55,13 @@ export function DashboardLayout({ children }: DocsLayoutProps) {
       <header className="sticky top-0 z-40 w-full border-b bg-background">
         <div className="container bg-slate-300 flex h-10 items-center space-x-4 sm:justify-between sm:space-x-0"></div>
       </header>
-      <div className="flex-1">
+      <div className="flex-1 relative">
         <TooltipProvider>
-          <aside className="bg-green-400 fixed">
+          <aside className="bg-green-400 absolute h-full">
             {/* <SidebarGroup title="dashboard" items={items} /> */}
-        	<SidebarDemo />
+            <SidebarDemo 
+            // items={[]} 
+            />
             <h1>sidebar</h1>
           </aside>
           {children}
