@@ -1,0 +1,29 @@
+{
+  "name": "@/components",
+  "version": "1.0.0",
+  "description": "",
+  "files": [
+    "icons/**/*",
+    "ui/**/*",
+    "utils.ts"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "class-variance-authority": "^0.6.1",
+    "clsx": "^1.2.1",
+    "config": "workspace:*",
+    "lucide-react": "^0.256.0",
+    "react-hook-form": "^7.45.1",
+    "tailwind-merge": "^1.13.2",
+    "zod": "^3.21.4"
+  },
+  "devDependencies": {
+    "react": "18.2.0",
+    "typescript": "5.1.3"
+  }
+}

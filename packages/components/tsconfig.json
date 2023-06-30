@@ -1,0 +1,24 @@
+{
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"display": "React Library",
+	// "extends": "config/base-ts.json",
+	"compilerOptions": {
+		"jsx": "react-jsx",
+		// nodenext
+		"moduleResolution": "NodeNext",
+		"lib": ["ES2015", "DOM", "DOM.Iterable", "ScriptHost", "ESNext"],
+		"module": "ESNext",
+		"target": "es6"
+  	},
+	"include": [
+		".",
+		"**/*.ts", 
+		"**/*.tsx", 
+		"types/**/*.d.ts"
+	],
+  "exclude": [
+    "dist",
+    "build",
+    "node_modules"
+  ]
+}
