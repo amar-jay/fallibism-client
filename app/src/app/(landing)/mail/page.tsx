@@ -1,19 +1,19 @@
 "use client";
 import Link from "next/link";
 
-import { cn } from "@/lib/utils";
+import { cn } from "~/lib/utils";
 import { Icons } from "@/components/icons";
-import { UserAuthForm } from "@/components/auth-form";
+import { UserAuthForm } from "~/components/auth-form";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import React from "react";
-import { emailSchema } from "@/lib/validations/auth";
+import { emailSchema } from "~/lib/validations/auth";
 import { useForm } from "@/components/hooks/use-form";
 import { Metadata } from "next/types";
 import { toast } from "@/components/hooks/use-toast";
-import { share } from "@/lib/share";
-import { email } from "@/lib/email";
+import { share } from "~/lib/share";
+import { email } from "~/lib/email";
 
 export default function LoginPage() {
 	const [isLoading, setIsLoading] = React.useState<boolean>(false);

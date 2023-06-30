@@ -1,7 +1,6 @@
 import React, {
   AnchorHTMLAttributes,
   DetailedHTMLProps,
-  RefAttributes,
 } from "react";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import { cn } from "@/components";

@@ -1,6 +1,6 @@
 import { buttonVariants } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
-import { Nav as MainNav } from "@/components/ui/nav";
+import { Nav as MainNav } from "~/components/nav";
+import { cn } from "~/lib/utils";
 import Link from "next/link";
 type RouteType = {
 	title: string;

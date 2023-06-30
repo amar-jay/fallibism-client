@@ -6,7 +6,7 @@ import GitHubProvider from "next-auth/providers/github";
 
 import { env } from "@/env.mjs";
 import { siteConfig } from "@/site-config";
-// import { db } from "@/lib/db"
+// import { db } from "~/lib/utilsib/db"
 
 // const postmarkClient = new Client(env.POSTMARK_API_TOKEN)
 

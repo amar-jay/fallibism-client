@@ -1,5 +1,5 @@
 import { Icons } from "@/components/icons";
-import { SidebarNav } from "@/components/sidebar";
+import { SidebarNav } from "~/components/sidebar";
 
 const sidebarItems: SidebarItemType[] = [
 	{

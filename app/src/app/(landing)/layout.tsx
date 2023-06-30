@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import { siteConfig } from "../../site-config";
 import { Nav } from "./Nav";
 import { SiteFooter } from "@/components/ui/footer";
+import { ModeToggle } from "~/components/theme-toggle";
 
 // primary font style
 const inter = Inter({
@@ -66,7 +67,7 @@ export default function RootLayout({
 		<>
 			<Nav />
 			<div className="flex flex-col h-screen w-screen">{children}</div>
-			<SiteFooter />
+			{/* <SiteFooter siteConfig={siteConfig} ModeToggle={<ModeToggle/>}/> */}
 		</>
 	);
 }

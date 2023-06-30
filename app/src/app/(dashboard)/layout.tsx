@@ -1,10 +1,10 @@
 "use client";
 import { Icons } from "@/components/icons";
-import { SidebarNav } from "@/components/sidebar";
+import { SidebarNav } from "~/components/sidebar";
 import Link from "next/link";
 
-import { siteConfig } from "@/site-config";
-import { Nav as MainNav } from "@/components/ui/nav";
+import { siteConfig } from "~/site-config";
+import { Nav as MainNav } from "~/components/nav";
 import { TooltipProvider } from "@radix-ui/react-tooltip";
 import { SidebarGroup, SidebarItem } from "./Nav";
 // import { DocsSearch } from "@/components/search"

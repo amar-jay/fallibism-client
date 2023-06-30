@@ -1,8 +1,8 @@
 import Link from "next/link";
 
-import { env } from "@/env.mjs";
+import { env } from "~/env.mjs";
 import { siteConfig } from "../../site-config";
-import { cn } from "@/lib/utils";
+import { cn } from "~/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 import { Command, X, ServerIcon, Server } from "lucide-react";
 import { Card } from "./Card";

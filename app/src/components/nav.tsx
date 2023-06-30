@@ -4,9 +4,9 @@ import * as React from "react";
 import Link from "next/link";
 import { useSelectedLayoutSegment } from "next/navigation";
 
-import { cn } from "@/lib/utils";
+import { cn } from "~/lib/utils";
 import { useLockBody } from "@/components/hooks";
-import { siteConfig } from "@/site-config";
+import { siteConfig } from "~/site-config";
 import { Icons } from "@/components/icons";
 
 export type NavItem = {
