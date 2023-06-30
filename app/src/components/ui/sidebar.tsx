@@ -33,7 +33,7 @@ export function SidebarNav({
             <TooltipTrigger asChild>
               <div className="pb-8">
                 <div className="flex flex-row gap-1 items-center hover:bg-primary/10 cursor-pointer px-3 rounded-md">
-                  <p className="mr-2 h-4 w-4">{Icon && <Icon/>}</p>
+                  <p className="mr-2 h-4 w-4">{Icon}</p>
                   <h4 className="rounded-md text-sm font-medium">{item.title}</h4>
                 </div>
                 {item.items ? (

@@ -30,7 +30,7 @@ const navItems: RouteType = [
     },
   ];
 
-const sidebarItems: SidebarItemType[] = [
+const sidebarItems: DashSidebarItemType[] = [
 	{
 		title: "Profile",
 		href: "/profile",
