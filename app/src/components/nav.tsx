@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useSelectedLayoutSegment } from "next/navigation";
 
 import { cn } from "@/lib/utils";
-import { useLockBody } from "@/components/hooks/use-lock-body";
+import { useLockBody } from "@/components/hooks";
 import { siteConfig } from "@/site-config";
 import { Icons } from "@/components/icons";
 

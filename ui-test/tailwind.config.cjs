@@ -4,6 +4,7 @@ module.exports = {
   content: [
     './index.html',
     './src/**/*.{ts,tsx}',
+    // "./node_modules/@/components/**/*.{ts,tsx}"
 	],
   theme: {
     container: {
@@ -12,6 +13,13 @@ module.exports = {
       screens: {
         "2xl": "1400px",
       },
+    "app-container": {
+      screens: {
+        "2xl": "1400px",
+      },
+      padding: "10rem",
+      center: true,
+    }
     },
     extend: {
       colors: {

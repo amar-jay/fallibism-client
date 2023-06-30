@@ -5,7 +5,7 @@ import React, {
 } from "react";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import { cn } from "@/components";
-import { CaretDownIcon } from "@radix-ui/react-icons";
+import { Icons } from "@/components/icons";
 import "./navigation-styles.css";
 
 const NavigationMenuDemo = () => {
@@ -14,7 +14,7 @@ const NavigationMenuDemo = () => {
       <NavigationMenu.List className="NavigationMenuList">
         <NavigationMenu.Item>
           <NavigationMenu.Trigger className="NavigationMenuTrigger">
-            Learn <CaretDownIcon className="CaretDown" aria-hidden />
+            Learn <Icons.down className="CaretDown" aria-hidden />
           </NavigationMenu.Trigger>
           <NavigationMenu.Content className="NavigationMenuContent">
             <ul className="List one">
@@ -55,7 +55,7 @@ const NavigationMenuDemo = () => {
 
         <NavigationMenu.Item>
           <NavigationMenu.Trigger className="NavigationMenuTrigger">
-            Overview <CaretDownIcon className="CaretDown" aria-hidden />
+            Overview <Icons.down className="CaretDown" aria-hidden />
           </NavigationMenu.Trigger>
           <NavigationMenu.Content className="NavigationMenuContent">
             <ul className="List two">

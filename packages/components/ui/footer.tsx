@@ -1,11 +1,12 @@
 import * as React from "react";
 
-import { siteConfig } from "@/site-config";
-import { cn } from "@/lib/utils";
-import { Icons } from "@/components/icons";
-import { ModeToggle } from "./theme-toggle";
+import { cn } from "../utils";
+import { Icons } from "../icons";
 
-export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
+export function SiteFooter({ className, siteConfig, ModeToggle }: React.HTMLAttributes<HTMLElement> & {
+  siteConfig: any;
+  ModeToggle: React.ReactNode;
+  }) {
   return (
     <footer className={cn(className)}>
       <div className="container flex flex-col items-center justify-between gap-4 py-10 md:h-24 md:flex-row md:py-0">

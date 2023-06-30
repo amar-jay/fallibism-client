@@ -3,9 +3,10 @@ import React, {
   DetailedHTMLProps,
 } from "react";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
-import { Icons, cn } from "@/components";
-import { CaretDownIcon } from "@radix-ui/react-icons";
+import {  cn, Icons, TooltipProvider, TooltipContent, TooltipTrigger} from "@/components";
+import { buttonVariants } from "@/components";
 import styles from "./sidebar.module.css";
+import { Tooltip } from "@/components";
 
 const sidebarItems = [
   {
@@ -26,8 +27,16 @@ const sidebarItems = [
         type: "item",
         title: "Profile",
         description: "Change your profile details",
+        href: "/settings/profile",
       }
     ]
+  },
+  {
+    type: "docs",
+    title: "chat",
+    description: "Chat with other users",
+    icon: Icons.moon,
+    href: "/chat",
   },
   {
     type: "link",
@@ -38,24 +47,34 @@ const sidebarItems = [
   }
 ]
 
-const SidebarMenuDemo = (
+const SidebarMenuDemo: React.FC<{
+  collapsible?: boolean;
+  comprehensive?: boolean;
+  className?: string;
+}> = (
   // props: { items: React.ReactNode[] }
-  collapsible = false
+  {
+  collapsible = false,
+  comprehensive = true,
+  className
+  }
   ) => {
   return (
     <NavigationMenu.Root className={cn(
       styles.SidebarMenuRoot,
+      className,
   )}>
       <NavigationMenu.List className={cn(
         styles.SidebarMenuList,
         "mr-1"
         )}>
-          {
+          { comprehensive ?
             sidebarItems.map((Item, index) => {
+              const items = Item?.items
               return (
                 <NavigationMenu.Item key={index}>
                 <NavigationMenu.Trigger className={styles.SidebarMenuTrigger}>
-                  {collapsible && Item.title ?
+                  {(!collapsible && Item.title.length > 0) ?
                   <span className={styles.SidebarMenuTriggerText}>
                     {Item.title}
                   </span>
@@ -66,14 +85,44 @@ const SidebarMenuDemo = (
                 </NavigationMenu.Trigger>
                 <NavigationMenu.Content className={cn(
                   styles.SidebarMenuContent,
-                  "text-md text-primary/40 px-3 py-5 w-[280px]"
+                  "text-md text-primary/40 px-3 py-5 w-[280px] h-fit"
                 )}>
-                  {Item.description}
+                  {Item.type === "item" ? Item.description : null}
+                  {Item.type === "link" ? Item.title : null}
+                  {Item.type === "list" && items && items.length > 0 ? (
+                    <ul className="grid grid-flow-row grid-cols-3">
+                      {items.map((Item, index) => (
+                        <ListItem
+                        key={index}
+                          title="Getting started"
+                          href="/docs/primitives/overview/getting-started"
+                        >
+                          {Item.description}
+                        </ListItem>
+                      ))}
+              </ul>
+                
+                  ): null
+                  }
                 </NavigationMenu.Content>
                   </NavigationMenu.Item>
               ) 
-            })
-          }
+            }) : (
+              <TooltipProvider>
+              <Tooltip>
+              <TooltipTrigger className={cn(buttonVariants({variant: "outline"}), styles.SidebarMenuTrigger)}>
+                <Icons.add className={styles.Spinner} aria-hidden name="profile" />
+              </TooltipTrigger>
+              <TooltipContent sideOffset={4} className={cn()}>
+                 <p>Add to library</p>
+              </TooltipContent>
+              <h1>ff</h1>
+              </Tooltip> 
+              </TooltipProvider>
+            )
+
+            }
+
 
         <NavigationMenu.Item>
           <NavigationMenu.Trigger className={styles.SidebarMenuTrigger}>

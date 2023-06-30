@@ -1,6 +1,6 @@
 import React from "react";
 // hack to get around passing in a type to the Icon component
-import { Search } from "lucide-react";
+import { ChevronDown, Search } from "lucide-react";
 import { MessageSquare, Share } from "lucide-react";
 import {
   AlertTriangle,
@@ -32,6 +32,7 @@ import {
 export type Icon = LucideIcon;
 
 export const Icons = {
+  down: ChevronDown,
   logo: Moon,
   close: X,
   spinner: Loader2,
