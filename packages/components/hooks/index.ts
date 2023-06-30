@@ -1,3 +1,3 @@
-export * from "./use-form.tsx";
-export * from "./use-lock-body.tsx";
-export * from "./use-toast.tsx";
+export * from "./use-form";
+export * from "./use-lock-body";
+export * from "./use-toast";

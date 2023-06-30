@@ -15,7 +15,7 @@ export type SiteConfig = {
 var siteConfig = {} as SiteConfig;
 
 const repoName = "fallibilism/struct";
-if (process.env.NODE_ENV !== "production") {
+// if (process.env.NODE_ENV !== "production") {
 	siteConfig = {
 		name: "fallibilism",
 		description: "xxxxx",
@@ -28,7 +28,7 @@ if (process.env.NODE_ENV !== "production") {
 		links: {
 			twitter: "https://twitter.com/AbdelmananAbde2",
 		},
-	};
+	// };
 }
 
 export { siteConfig };

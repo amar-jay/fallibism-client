@@ -124,7 +124,7 @@ export default async function IndexPage() {
 						Taxonomy is open source and powered by open source software. <br />{" "}
 						The code is available on{" "}
 						<Link
-							href={siteConfig.github.url}
+							href={siteConfig?.github?.url ?? "#"}
 							target="_blank"
 							rel="noreferrer"
 							className="underline underline-offset-4"
@@ -135,7 +135,7 @@ export default async function IndexPage() {
 					</p>
 					{stars && (
 						<Link
-							href={siteConfig.github.url}
+							href={siteConfig?.github?.url ?? "#"}
 							target="_blank"
 							rel="noreferrer"
 							className="flex"

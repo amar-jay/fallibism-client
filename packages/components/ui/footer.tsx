@@ -35,7 +35,7 @@ export function SiteFooter({ className, siteConfig, ModeToggle }: React.HTMLAttr
             .
           </p>
         </div>
-        <ModeToggle />
+        {ModeToggle}
       </div>
     </footer>
   );

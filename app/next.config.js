@@ -2,17 +2,17 @@
 const nextConfig = {
     // output: 'export',
     experimental: {
-        serverActions: true,
+        // serverActions: true,
     },
       typescript: {
 //    ignoreBuildErrors: true,
     },
     eslint: {
-        ignoreDuringBuilds: true,
+        // ignoreDuringBuilds: true,
     },
     
      transpilePackages: ['@/components'],
-    
+    swcMinify: true,
 }
 
 module.exports = nextConfig
