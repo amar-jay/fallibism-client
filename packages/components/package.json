@@ -2,8 +2,10 @@
   "name": "@/components",
   "version": "1.0.0",
   "description": "",
+  "main": "index.ts",
+  "type": "module",
   "files": [
-    "icons/**/*",
+    "icons/*",
     "ui/**/*",
     "utils.ts"
   ],
@@ -14,16 +16,21 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@radix-ui/colors": "^1.0.0",
+    "@radix-ui/react-navigation-menu": "^1.1.3",
     "class-variance-authority": "^0.6.1",
     "clsx": "^1.2.1",
     "config": "workspace:*",
     "lucide-react": "^0.256.0",
+    "react": "18.2.0",
+    "react-dom": "^18.2.0",
     "react-hook-form": "^7.45.1",
     "tailwind-merge": "^1.13.2",
     "zod": "^3.21.4"
   },
   "devDependencies": {
-    "react": "18.2.0",
+    "@types/react": "^18.0.37",
+    "@types/react-dom": "^18.0.11",
     "typescript": "5.1.3"
   }
 }

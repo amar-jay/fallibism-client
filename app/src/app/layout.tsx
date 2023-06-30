@@ -1,11 +1,11 @@
-import { cn } from "@/lib/utils";
+import { cn } from "~/lib/utils";
 import "./globals.css";
 import { Inter } from "next/font/google";
-// import localFont from "next/font/local"
-import { ThemeProvider } from "@/components/theme-provider";
-import { Analytics } from "@/components/analytics";
 import { Toaster } from "@/components/ui/toaster";
-import { TailwindIndicator } from "@/components/tailwind-indicator";
+// import localFont from "next/font/local"
+import { ThemeProvider } from "~/components/theme-provider";
+import { Analytics } from "~/components/analytics";
+import { TailwindIndicator } from "~/components/tailwind-indicator";
 import { siteConfig } from "../site-config";
 
 // primary font style
