@@ -75,10 +75,10 @@ export default function RootLayout({
   return (
     <>
           <Nav />
-          <SiteFooter />
     <div className='flex flex-col h-screen w-screen'>
           {children}
     </div>
+          <SiteFooter />
     </>
   )
 }

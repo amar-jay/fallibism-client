@@ -2,6 +2,8 @@
 import { cn } from "@/lib/utils"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import { Icons } from "@/components/icons"
+import { Tooltip, TooltipContent, TooltipTrigger } from "./tooltip"
 
 
 export function SideNav() {
@@ -22,18 +24,29 @@ export function SidebarNav({
 }) {
 	const pathname = usePathname()
 
+
   return items.length > 0 && (
     <div className="w-full">
-      {items.map((item, index) => (
-        <div key={index} className={cn("pb-8")}>
-          <h4 className="mb-1 rounded-md px-2 py-1 text-sm font-medium hover:bg-primary/50">
-            {item.title}
-          </h4>
-          {item.items ? (
-            <SidebarNavItems items={item.items} pathname={pathname} />
-          ) : null}
-        </div>
-      ))}
+      {items.map(({icon: Icon, ...item}, index) => {
+        return (
+          <Tooltip key={index}>
+            <TooltipTrigger asChild>
+              <div className="pb-8">
+                <div className="flex flex-row gap-1 items-center hover:bg-primary/10 cursor-pointer px-3 rounded-md">
+                  <p className="mr-2 h-4 w-4">{Icon && <Icon/>}</p>
+                  <h4 className="rounded-md text-sm font-medium">{item.title}</h4>
+                </div>
+                {item.items ? (
+                  <SidebarNavItems items={item.items} pathname={pathname} />
+                ) : null}
+              </div>
+            </TooltipTrigger>
+            <TooltipContent>
+                <p>{item.title}</p>
+            </TooltipContent>
+          </Tooltip>
+        )
+      })}
     </div>
   ) 
 }

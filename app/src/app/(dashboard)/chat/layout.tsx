@@ -5,12 +5,12 @@ const sidebarItems: SidebarItemType[] = [
 	{
 		title: "Profile",
 		href: "/profile",
-		icon: <Icons.user />,
+		icon: Icons.user,
 	},
 	{
 		title: "Settings",
 		href: "/settings",
-		icon: <Icons.settings />,
+		icon: Icons.settings,
 	},
 ]
 export default function ChatPage({ children }: { children: React.ReactNode }) {

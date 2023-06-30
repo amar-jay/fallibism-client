@@ -1,4 +1,6 @@
-import { Share } from "lucide-react"
+"use server"
+// hack to get around passing in a type to the Icon component
+import { MessageSquare, Share } from "lucide-react"
 import {
   AlertTriangle,
   ArrowRight,
@@ -39,6 +41,7 @@ export const Icons = {
   page: File,
   media: Image,
   settings: Settings,
+  chat: MessageSquare,
   billing: CreditCard,
   ellipsis: MoreVertical,
   share: Share,
