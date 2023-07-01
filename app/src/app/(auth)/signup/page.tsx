@@ -10,7 +10,6 @@ export const metadata = {
 	description: "Create an account to get started.",
 };
 
-export const runtime = 'edge'
 
 export default function SignupPage() {
 	return (
