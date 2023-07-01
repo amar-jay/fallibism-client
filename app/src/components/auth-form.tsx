@@ -116,6 +116,26 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
 				)}{" "}
 				Github
 			</button>
+
+<div className="h-1"/>
+			<button
+				type="button"
+				className={cn(
+					buttonVariants({ variant: "secondary", className: "rounded-md" })
+				)}
+				onClick={() => {
+					setIsGitHubLoading(true);
+					signIn("google");
+				}}
+				disabled={isLoading || isGitHubLoading}
+			>
+				{isGitHubLoading ? (
+					<Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
+				) : (
+					<Icons.google className="mr-2 h-4 w-4" />
+				)}{" "}
+				Google
+			</button>
 		</div>
 	);
 }
