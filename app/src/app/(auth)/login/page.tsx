@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 	description: "Login to your account",
 };
 
-export const runtime = 'edge'
+// export const runtime = 'edge'
 
 export default function LoginPage() {
 	return (
