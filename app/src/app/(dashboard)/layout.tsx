@@ -64,16 +64,16 @@ export default function DashboardLayout({ children }: DocsLayoutProps) {
 					</MainNav>
 					<div className="flex flex-1 items-center space-x-4 sm:justify-end">
 						<div className="flex-1 sm:grow-0">{/* <DocsSearch /> */}</div>
-						<nav className="flex space-x-4">
 							<Link
 								href={siteConfig.github.url}
 								target="_blank"
 								rel="noreferrer"
 							>
+						<nav className="flex space-x-4 items-center">
 								<Icons.user className="h-7 w-7" />
 								<span className="sr-only">Login</span>
-							</Link>
 						</nav>
+							</Link>
 					</div>
 				</div>
 			</header>
