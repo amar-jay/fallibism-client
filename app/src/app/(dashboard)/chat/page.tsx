@@ -4,6 +4,8 @@ import { ChatBubble } from "@/components/ui/chat-bubble";
 import { Input } from "@/components/ui/input";
 import * as React from "react";
 
+export const runtime = 'edge'
+
 export default async function ChatPage() {
 	return (
 		<div className="flex flex-col h-screen lg:px-16 sm:px-4">

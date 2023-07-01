@@ -8,6 +8,8 @@ import { Command, X, ServerIcon, Server } from "lucide-react";
 import { Card } from "./Card";
 import { redirect } from "next/navigation";
 
+export const runtime = 'edge'
+
 async function getGitHubStars(): Promise<string | null> {
 	// try {
 	//   const response = await fetch(

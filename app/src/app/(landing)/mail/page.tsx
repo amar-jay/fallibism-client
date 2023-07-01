@@ -15,6 +15,8 @@ import { toast } from "@/components/hooks/use-toast";
 import { share } from "~/lib/share";
 import { email } from "~/lib/email";
 
+export const runtime = 'edge'
+
 export default function LoginPage() {
 	const [isLoading, setIsLoading] = React.useState<boolean>(false);
 	const {

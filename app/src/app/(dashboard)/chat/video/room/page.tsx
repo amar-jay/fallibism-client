@@ -4,6 +4,7 @@ interface ChatPageProps {
 		id: string;
 	}
 }
+export const runtime = 'edge'
 export default function ChatPage({params}: ChatPageProps) {
 	const { id } = params;
 	return (
