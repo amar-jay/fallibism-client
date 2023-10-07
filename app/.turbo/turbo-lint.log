@@ -1,0 +1,9 @@
+
+> app@0.1.0 lint /workspaces/fallibism-client/app
+> next lint
+
+- info Loaded env from /workspaces/fallibism-client/app/.env.local
+- warn You have enabled experimental feature (serverActions) in next.config.js.
+- warn Experimental features are not covered by semver, and may cause unexpected or broken application behavior. Use at your own risk.
+
+✔ No ESLint warnings or errors
